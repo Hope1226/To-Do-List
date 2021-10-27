@@ -15,10 +15,10 @@ const taskList = [
   },
 ];
 
-for (let i = 0; i < taskList.length; i += 1){
+for (let i = 0; i < taskList.length; i += 1) {
   taskCont.innerHTML += `
     <div class="task">
       <span class="checkbox"></span>
       <p class="taskTitle">${taskList[i].description}</p>
-    </div>`
-};
+    </div>`;
+}
