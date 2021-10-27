@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To Do List
 
-> One paragraph statement about the project.
+> Simple To Do list project to add and remove daily tasks.
 
 ![screenshot] * pending 
 
