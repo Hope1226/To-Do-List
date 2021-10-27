@@ -4,41 +4,45 @@
 
 > Simple To Do list project to add and remove daily tasks.
 
-![screenshot] * pending 
+![screenshot] (./screen-shot.png) 
 
 Additional description about the project and its features.
 
 ## Built With
 
 - Major languages
+  - HTML
+  - CSS
+  - Java Script
 - Frameworks
+  - n/a
 - Technologies used
+  - webpack
 
 ## Live Demo
 
-[Live Demo Link] * pending
+[Live Demo Link] (https://hope1226.github.io/To-Do-List/)
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+    - Node.js is to be installed on your machine
+    - Basic knowladge of JavaScript, CSS, HTML
 
 ### Setup
-
-### Install
+    - Install npm locally
+    - Clone this repo locally usign the below comand:
+      git clone https://github.com/Hope1226/To-Do-List.git
+    - Install webpack and webpack -cli via follwoing comand:
+      npm install webpack webpack -cli --save-dev
 
 ### Usage
-
-### Run tests
-
-### Deployment
-
+    - Oly files in src are to be modified
+    - Run nmp webpack to bundle the modules
 
 
 ## Authors
