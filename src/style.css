@@ -53,6 +53,7 @@ body {
   background: url(./more-icon.svg) 98% 50% no-repeat;
   border-bottom: 1px solid grey;
   padding: 20px;
+  transition: all 1s;
 }
 
 .todo-container .taskContainer .checkbox {
@@ -80,4 +81,9 @@ body {
 
 .todo-container .headline {
   background: url(./loop-icon.svg) 97% 50% no-repeat;
+}
+
+.todo-container .taskContainer .checked {
+  background-color: #a8a8a8;
+  color: #fff;
 }
