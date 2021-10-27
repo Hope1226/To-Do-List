@@ -1,9 +1,9 @@
 import './style.css';
-import { updateComplation } from './updateStatus';
-import { updateLocalStr } from './updateLocalStorage';
+import updateComplation from './updateStatus.js';
+import updateLocalStr from './updateLocalStorage.js';
 
-const taskCont = document.querySelector('.taskContainer.js');
-const localData = localStorage.getItem('localTasks.js');
+const taskCont = document.querySelector('.taskContainer');
+const localData = localStorage.getItem('localTasks');
 
 const taskList = [
   {
@@ -18,11 +18,11 @@ const taskList = [
   },
 ];
 
-if ( localData ) {
+if (localData) {
   const localList = JSON.parse(localData);
   for (let i = 0; i < localList.length; i += 1) {
-    if ( localList[i].completed ) {
-    taskCont.innerHTML += `
+    if (localList[i].completed) {
+      taskCont.innerHTML += `
       <div class="task checked">
       <input type="checkbox" class="checkbox" name="completion" id="${i}" value="completion" checked>
         <p class="taskTitle">${localList[i].description}</p>
@@ -42,7 +42,7 @@ if ( localData ) {
       <input type="checkbox" class="checkbox" name="completion" id="${i}" value="completion">
         <p class="taskTitle">${taskList[i].description}</p>
       </div>`;
-    }
+  }
 }
 
 const checkboxes = document.querySelectorAll('.checkbox');
@@ -52,4 +52,4 @@ checkboxes.forEach((checkbox) => {
     updateComplation(taskList, checkbox, e.target.id);
     updateLocalStr(taskList);
   });
- });
+});
