@@ -11,7 +11,10 @@
     <div class="item headline">
       <h1>Today's To Do</h1>
     </div>
-    <input class="item" type="text" id="inputTask" name="inputTask" placeholder="Add to your list...">
+    <form class="item" id="addTaskForm">
+      <input  type="text" id="inputTask" name="inputTask" placeholder="Add to your list...">
+      <button type="submit"><img src="./enter-icon.svg" alt="enterIcon"></button>
+    </form>
     <div class="item taskContainer"></div>
     <button class="item centered" type="button" id="clearBtn">Clear all completed</button>
   </section>

@@ -86,10 +86,22 @@ body {
   border-bottom: none;
 }
 
-.todo-container input {
+.todo-container form {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.todo-container form input {
   font-style: italic;
-  background: url(./enter-icon.svg) 97% 50% no-repeat;
   color: #a8a8a8;
+  background: none;
+  border: none;
+}
+
+.todo-container form button {
+  border: none;
+  background: none;
 }
 
 .todo-container input:focus {
@@ -98,7 +110,7 @@ body {
 }
 
 .todo-container .headline {
-  background: url(./loop-icon.svg) 97% 50% no-repeat;
+  background: url(./loop-icon.svg) 98% 50% no-repeat;
 }
 
 .todo-container .taskContainer .checked {

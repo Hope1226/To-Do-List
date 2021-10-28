@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Hope1226/To-Do-List#readme",
   "devDependencies": {
     "css-loader": "^6.5.0",
+    "html-loader": "^3.0.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.60.0",
