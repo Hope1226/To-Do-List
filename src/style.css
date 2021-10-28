@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #7e7e7e;
 }
 
 *,
@@ -16,6 +20,7 @@ html {
 }
 
 body {
+  background: gold;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -29,14 +34,22 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, auto);
   border: none;
-  box-shadow: 0 0 20px 4px #a8a8a8;
+  box-shadow: 5px 5px 5px 4px #41414187;
   justify-content: start;
+  background: wheat;
+  border-radius: 16px;
+}
+
+.todo-container button {
+  border: none;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
 .todo-container .item {
   padding: 20px;
   border: none;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px dotted grey;
 }
 
 .todo-container .taskContainer {
@@ -51,9 +64,13 @@ body {
   grid-gap: 20px;
   align-items: center;
   background: url(./more-icon.svg) 98% 50% no-repeat;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px dotted grey;
   padding: 20px;
   transition: all 1s;
+}
+
+.todo-container .taskContainer .task:last-child {
+  border-bottom: none;
 }
 
 .todo-container .taskContainer .checkbox {
@@ -72,10 +89,11 @@ body {
 .todo-container input {
   font-style: italic;
   background: url(./enter-icon.svg) 97% 50% no-repeat;
+  color: #a8a8a8;
 }
 
 .todo-container input:focus {
-  color: #e4772e;
+  color: #000;
   outline: none;
 }
 
@@ -84,6 +102,5 @@ body {
 }
 
 .todo-container .taskContainer .checked {
-  background-color: #a8a8a8;
-  color: #fff;
+  text-decoration: line-through;
 }
