@@ -1,6 +1,4 @@
 import './style.css';
-import updateComplation from './updateStatus.js';
-import updateLocalStr from './updateLocalStorage.js';
 import addTasks from './addTask.js';
 
 const taskCont = document.querySelector('.taskContainer');
@@ -33,18 +31,9 @@ const display = () => {
   // } else {
       taskCont.innerHTML += `
         <div class="task">
-        <input type="checkbox" class="checkbox" name="completion" id="${taskList[taskList.length - 1]}" value="completion">
+        <input type="checkbox" class="checkbox" name="completion" id="${taskList.length - 1}" value="completion">
           <p class="taskTitle">${taskList[taskList.length - 1].description}</p>
         </div>`;
 };
 
 addTasks(form, intTask, taskList, display);
-
-// const checkboxes = document.querySelectorAll('.checkbox');
-
-// checkboxes.forEach((checkbox) => {
-//   checkbox.addEventListener('change', (e) => {
-//     updateComplation(taskList, checkbox, e.target.id);
-//     updateLocalStr(taskList);
-//   });
-// });

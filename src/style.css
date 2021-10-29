@@ -92,11 +92,16 @@ body {
   padding: 50px;
 }
 
+.todo-container form > * {
+  flex: 1;
+}
+
 .todo-container form input {
   font-style: italic;
   color: #a8a8a8;
   background: none;
   border: none;
+  flex: 30;
 }
 
 .todo-container form button {
