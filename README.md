@@ -4,7 +4,7 @@
 
 > Simple To Do list project to add and remove daily tasks.
 
-![screenshot] (screen-shot.png) 
+![screenshot] (./src/screen-shot.png) 
 
 Additional description about the project and its features.
 
