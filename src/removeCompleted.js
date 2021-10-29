@@ -1,13 +1,11 @@
 const removeCompleted = (list, updateDisplay, updateLcSrg, updateStatus, cont) => {
-  const nonComplete = list.filter(function (task) {
-    if (!task.completed) {
-      return task;
-    };
+  const nonComplete = list.filter((task)=>{
+    if (!task.completed) return true;
   });
 
   for (let i = 0; i < nonComplete.length; i += 1) {
-    nonComplete[i].index = i
-  };
+    nonComplete[i].index = i;
+  }
   updateLcSrg(nonComplete);
   updateDisplay(nonComplete, cont);
 
@@ -15,8 +13,8 @@ const removeCompleted = (list, updateDisplay, updateLcSrg, updateStatus, cont) =
 
   checkboxes.forEach((checkbox) => {
     checkbox.addEventListener('change', (e) => {
-        updateStatus(nonComplete, checkbox, e.target.id);
-        updateLcSrg(nonComplete);
+    updateStatus(nonComplete, checkbox, e.target.id);
+    updateLcSrg(nonComplete);
     });
   });
 };
