@@ -1,4 +1,5 @@
 const updateLocalStr = (list) => {
+  localStorage.clear();
   localStorage.setItem('localTasks', JSON.stringify(list));
 };
 

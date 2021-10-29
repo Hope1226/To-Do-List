@@ -4,7 +4,7 @@
 
 > Simple To Do list project to add and remove daily tasks.
 
-![screenshot] (screen-shot.png) 
+![screenshot] (./src/screen-shot.png) 
 
 Additional description about the project and its features.
 
@@ -47,7 +47,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Hope**
+👤 **Umidjon Ustabaev (Hope)**
 
 - GitHub: [@Hope1226](https://github.com/Hope1226)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/umidjon-ustabaev-03b92b11a/)
