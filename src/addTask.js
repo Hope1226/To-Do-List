@@ -11,7 +11,7 @@ const addTasks = (element, input, list, disFuntction) => {
       index: list.length,
     });
     updateLocalStr(list)
-    disFuntction();
+    disFuntction(list);
 
     const checkboxes = document.querySelectorAll('.checkbox');
 

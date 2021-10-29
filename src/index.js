@@ -1,34 +1,50 @@
 import './style.css';
 import addTasks from './addTask.js';
+import removeCompleted from './removeCompleted.js';
+import updateLocalStr from './updateLocalStorage.js';
+import updateComplation from './updateStatus.js';
+
 
 const taskCont = document.querySelector('.taskContainer');
 const localData = localStorage.getItem('localTasks');
 const form = document.querySelector('#addTaskForm');
 const intTask = document.querySelector('#inputTask');
+const clearBtn = document.querySelector('#clearBtn');
 
-const taskList = [
+let taskList = [
 
 ];
 
+if(localData && JSON.parse(localData).length){
+  taskList = JSON.parse(localData);
+  for (let i = 0; i < taskList.length; i += 1) {
+    if (taskList[i].completed) {
+      taskCont.innerHTML += `
+      <div class="task checked">
+      <input type="checkbox" class="checkbox" name="completion" id="${i}" value="completion" checked>
+        <p class="taskTitle">${taskList[i].description}</p>
+      </div>`;
+    } else {
+      taskCont.innerHTML += `
+      <div class="task">
+      <input type="checkbox" class="checkbox" name="completion" id="${i}" value="completion">
+        <p class="taskTitle">${taskList[i].description}</p>
+      </div>`;
+    }
+  }
+}
+
+const checkboxes = document.querySelectorAll('.checkbox');
+  checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', (e) => {
+  updateComplation(taskList, checkbox, e.target.id);
+  updateLocalStr(taskList);
+});
+});
+
+
+
 const display = () => {
-  // if (localData) {
-  //   const localList = JSON.parse(localData);
-  //   for (let i = 0; i < localList.length; i += 1) {
-  //     if (localList[i].completed) {
-  //       taskCont.innerHTML += `
-  //       <div class="task checked">
-  //       <input type="checkbox" class="checkbox" name="completion" id="${i}" value="completion" checked>
-  //         <p class="taskTitle">${localList[i].description}</p>
-  //       </div>`;
-  //     } else {
-  //       taskCont.innerHTML += `
-  //       <div class="task">
-  //       <input type="checkbox" class="checkbox" name="completion" id="${i}" value="completion">
-  //         <p class="taskTitle">${localList[i].description}</p>
-  //       </div>`;
-  //     }
-  //   }
-  // } else {
       taskCont.innerHTML += `
         <div class="task">
         <input type="checkbox" class="checkbox" name="completion" id="${taskList.length - 1}" value="completion">
@@ -37,3 +53,6 @@ const display = () => {
 };
 
 addTasks(form, intTask, taskList, display);
+clearBtn.addEventListener('click', ()=> removeCompleted(taskList));
+
+export { taskList, taskCont };

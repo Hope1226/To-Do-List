@@ -47,7 +47,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Hope**
+👤 **Umidjon Ustabaev (Hope)**
 
 - GitHub: [@Hope1226](https://github.com/Hope1226)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/umidjon-ustabaev-03b92b11a/)
