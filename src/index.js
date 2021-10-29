@@ -1,9 +1,9 @@
 import './style.css';
 import addTasks from './addTask.js';
 import removeCompleted from './removeCompleted.js';
-import updateLocalStr from './updateLocalStorage.js';
 import updateComplation from './updateStatus.js';
-
+import updateDis from "./updateDisplay.js";
+import updateLocalStr from './updateLocalStorage.js';
 
 const taskCont = document.querySelector('.taskContainer');
 const localData = localStorage.getItem('localTasks');
@@ -15,7 +15,7 @@ let taskList = [
 
 ];
 
-if(localData && JSON.parse(localData).length){
+if (localData && JSON.parse(localData).length) {
   taskList = JSON.parse(localData);
   for (let i = 0; i < taskList.length; i += 1) {
     if (taskList[i].completed) {
@@ -35,24 +35,22 @@ if(localData && JSON.parse(localData).length){
 }
 
 const checkboxes = document.querySelectorAll('.checkbox');
-  checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener('change', (e) => {
-  updateComplation(taskList, checkbox, e.target.id);
-  updateLocalStr(taskList);
+checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', (e) => {
+    updateComplation(taskList, checkbox, e.target.id);
+    updateLocalStr(taskList);
+    });
 });
-});
-
-
 
 const display = () => {
       taskCont.innerHTML += `
         <div class="task">
-        <input type="checkbox" class="checkbox" name="completion" id="${taskList.length - 1}" value="completion">
+          <input type="checkbox" class="checkbox" name="completion" id="${taskList.length - 1}" value="completion">
           <p class="taskTitle">${taskList[taskList.length - 1].description}</p>
         </div>`;
 };
 
-addTasks(form, intTask, taskList, display);
-clearBtn.addEventListener('click', ()=> removeCompleted(taskList));
+addTasks(form, intTask, taskList, display, updateComplation, updateLocalStr);
+clearBtn.addEventListener('click', () => removeCompleted(taskList, updateDis, updateLocalStr, updateComplation));
 
 export { taskList, taskCont };
