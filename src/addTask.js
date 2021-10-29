@@ -1,4 +1,3 @@
-
 const addTasks = (element, input, list, disFuntction, updateStatus, updateLcSrg) => {
   element.addEventListener('submit', (event) => {
     event.preventDefault();

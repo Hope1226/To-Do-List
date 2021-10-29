@@ -1,18 +1,15 @@
-// import updateDis from "./updateDisplay.js";
-// import updateLocalStr from './updateLocalStorage.js';
-// import updateComplation from './updateStatus.js';
-const removeCompleted = (list, updateDisplay, updateLcSrg, updateStatus) => {
-  const nonComplete = list.filter((task) => {
+const removeCompleted = (list, updateDisplay, updateLcSrg, updateStatus, cont) => {
+  const nonComplete = list.filter(function (task) {
     if (!task.completed) {
       return task;
     };
   });
 
   for (let i = 0; i < nonComplete.length; i += 1) {
-    nonComplete[i].index = i;
+    nonComplete[i].index = i
   };
   updateLcSrg(nonComplete);
-  updateDisplay(nonComplete);
+  updateDisplay(nonComplete, cont);
 
   const checkboxes = document.querySelectorAll('.checkbox');
 
