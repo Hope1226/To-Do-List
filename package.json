@@ -4,7 +4,7 @@
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -21,9 +21,11 @@
   },
   "homepage": "https://github.com/Hope1226/To-Do-List#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
     "css-loader": "^6.5.0",
     "html-loader": "^3.0.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.3.1",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
