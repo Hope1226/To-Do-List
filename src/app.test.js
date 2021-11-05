@@ -3,8 +3,7 @@ import updateComplation from './updateStatus.js';
 import mainPage from './__mock__/dom.js';
 import updateDis from './updateDisplay.js';
 
-describe("Pure functions", () => {
-
+describe('Pure functions', () => {
   test('Update display', () => {
     const page = mainPage.window.document.body;
     const container = page.querySelector('.taskContainer');
@@ -22,7 +21,7 @@ describe("Pure functions", () => {
       key: 'value',
     }];
   
-    updateLocalStr(list);
+  updateLocalStr(list);
     const storage = JSON.parse(localStorage.getItem('localTasks'));
     expect(storage).toHaveLength(1);
   });
@@ -35,16 +34,16 @@ describe("Pure functions", () => {
           <p class="taskTitle">Some text</p>
     </div>`;
   
-    const checkbox = dom.querySelector('.checkbox');
+  const checkbox = dom.querySelector('.checkbox');
   
-    const list = [
+  const list = [
       {
         index: 1,
         completed: false,
       },
     ];
   
-    updateComplation(list, checkbox, 0);
-    expect(list[0].completed).toBeTruthy();
+  updateComplation(list, checkbox, 0);
+  gitexpect(list[0].completed).toBeTruthy();
   });
 });
