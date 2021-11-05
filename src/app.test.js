@@ -32,17 +32,14 @@ describe('Pure functions', () => {
         <input type="checkbox" class="checkbox" name="completion" id="0" value="completion" checked> 
           <p class="taskTitle">Some text</p>
     </div>`;
-  
     const checkbox = dom.querySelector('.checkbox');
-  
     const list = [
       {
         index: 1,
         completed: false,
       },
     ];
-  
     updateComplation(list, checkbox, 0);
-    gitexpect(list[0].completed).toBeTruthy();
+    expect(list[0].completed).toBeTruthy();
   });
 });
