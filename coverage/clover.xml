@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1636123179287" clover="3.2.0">
-  <project timestamp="1636123179287" name="All files">
-    <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="10" coveredelements="10" complexity="0" loc="8" ncloc="8" packages="2" files="3" classes="3"/>
+<coverage generated="1636126119201" clover="3.2.0">
+  <project timestamp="1636126119201" name="All files">
+    <metrics statements="14" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3" elements="19" coveredelements="16" complexity="0" loc="14" ncloc="14" packages="2" files="4" classes="4"/>
     <package name="src">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="13" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
       <file name="updateDisplay.js" path="/home/hope/Microverse_2.0/Module-2/projects/To-Do-List/src/updateDisplay.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -17,12 +17,21 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
       </file>
+      <file name="updateStatus.js" path="/home/hope/Microverse_2.0/Module-2/projects/To-Do-List/src/updateStatus.js">
+        <metrics statements="6" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+      </file>
     </package>
     <package name="src.__mock__">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="dom.js" path="/home/hope/Microverse_2.0/Module-2/projects/To-Do-List/src/__mock__/dom.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
       </file>
     </package>
   </project>

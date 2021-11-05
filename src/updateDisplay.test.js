@@ -1,6 +1,5 @@
 import mainPage from "./__mock__/dom";
 import updateDis from "./updateDisplay";
-import { lint } from "stylelint";
 
 test("Update display", () => {
   const page = mainPage.window.document.body;
