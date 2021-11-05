@@ -1,4 +1,4 @@
-import { JSDOM } from "jsdom";
+import { JSDOM } from 'jsdom';
 
 const mainPage = new JSDOM(`
 <!DOCTYPE html>
@@ -23,6 +23,6 @@ const mainPage = new JSDOM(`
   </section>
 </body>
 </html>
-`)
+`);
 
 export default mainPage;

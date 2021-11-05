@@ -1,8 +1,8 @@
-import updateLocalStr from "./updateLocalStorage";
+import updateLocalStr from './updateLocalStorage.js';
 
-test("Should  return true if the the storage is the same as list", () => {
-  const list = [ {
-    key: "value"
+test('Should  return true if the the storage is the same as list', () => {
+  const list = [{
+    key: 'value',
   }];
 
   updateLocalStr(list);
