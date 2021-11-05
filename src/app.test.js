@@ -20,8 +20,7 @@ describe('Pure functions', () => {
     const list = [{
       key: 'value',
     }];
-  
-  updateLocalStr(list);
+    updateLocalStr(list);
     const storage = JSON.parse(localStorage.getItem('localTasks'));
     expect(storage).toHaveLength(1);
   });
@@ -34,16 +33,16 @@ describe('Pure functions', () => {
           <p class="taskTitle">Some text</p>
     </div>`;
   
-  const checkbox = dom.querySelector('.checkbox');
+    const checkbox = dom.querySelector('.checkbox');
   
-  const list = [
+    const list = [
       {
         index: 1,
         completed: false,
       },
     ];
   
-  updateComplation(list, checkbox, 0);
-  gitexpect(list[0].completed).toBeTruthy();
+    updateComplation(list, checkbox, 0);
+    gitexpect(list[0].completed).toBeTruthy();
   });
 });
