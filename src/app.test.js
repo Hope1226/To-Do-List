@@ -47,13 +47,12 @@ describe('Pure functions', () => {
     dom.innerHTML = `
     <div class="item taskContainer"></div>`;
     const container = dom.querySelector('.taskContainer');
-    console.log(container)
     const list = [{
       index: 1,
       description: 'some text',
     }];
     updateDis(list, container);
-    const tasks = dom.querySelectorAll('.task')
+    const tasks = dom.querySelectorAll('.task');
     expect(tasks).toHaveLength(1);
   });
   test('Should  return true if the the storage is the same as list', () => {
