@@ -1,4 +1,4 @@
-const removeCompleted = (list, updateDisplay, updateLcSrg, updateStatus, cont) => {
+const removeCompleted = (list) => {
   const nonComplete = list.filter((task) => {
     if (!task.completed) { return true; }
     return false;

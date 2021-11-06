@@ -1,7 +1,7 @@
 import updateLocalStr from './updateLocalStorage.js';
 import mainPage from './__mock__/dom.js';
-import removeCompleted from './__mock__/removeCompleted';
-import addTasks from './addTask';
+import removeCompleted from './__mock__/removeCompleted.js';
+import addTasks from './addTask.js';
 
 describe('Pure functions', () => {
   test('Add taskt', () => {
@@ -13,21 +13,16 @@ describe('Pure functions', () => {
     </form>`;
     const form = dom.querySelector('#addTaskForm');
     const input = dom.querySelector('#inputTask');
-    input.value = "some text"
+    input.value = 'some text';
     const list = [];
-    const updateDply = (par) => {
-      return par;
-    }
-    const updateStorage = (par) => {
-      return par;
-    }
-    const updateStatus = (par) => {
-      return par;
-    }
+    const updateDply = (par) => par;
+    
+    const updateStorage = (par) => par;
+    const updateStatus = (par) => par;
     addTasks(form, input, list, updateDply, updateStatus, updateStorage);
-    form.submit()
+    form.submit();
     expect(list).toHaveLength(1);
-  })
+  });
   test('Remove completed', () => {
     const list = [{
       key: 'value',
