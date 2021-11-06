@@ -24,13 +24,13 @@ describe('Pure functions', () => {
   });
   test('Remove completed', () => {
     const list = [{
-        key: 'value',
-        completed: false,
-      },
-      {
-        key: 'value',
-        completed: true,
-      },
+      key: 'value',
+      completed: false,
+    },
+    {
+      key: 'value',
+      completed: true,
+    },
     ];
     updateLocalStr(list);
     const storage = JSON.parse(localStorage.getItem('localTasks'));
